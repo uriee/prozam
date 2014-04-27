@@ -1,8 +1,8 @@
 <template name="postItem">
-  <div class="brick" {{attributes}}>
+  <div class="post" {{attributes}}>
     <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
     <div class="post-content">
-      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span>{{domain}}</span></h3>
+      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a><span>{{poem}}</span></h3>
       <p>
         {{pluralize votes "Vote"}},
         submitted by {{author}},

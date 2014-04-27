@@ -4,66 +4,66 @@ if (Posts.find().count() === 0) {
   
   // create two users
   var tomId = Meteor.users.insert({
-    profile: { name: 'Tom Coleman' }
+    profile: { name: 'KooKooriKoo tarnegol' }
   });
   var tom = Meteor.users.findOne(tomId);
-  var sachaId = Meteor.users.insert({
-    profile: { name: 'Sacha Greif' }
+  var u = Meteor.users.insert({
+    profile: { name: 'cod Coda' }
   });
-  var sacha = Meteor.users.findOne(sachaId);
+  var user = Meteor.users.findOne(u);
   
-  var telescopeId = Posts.insert({
+  var postid = Posts.insert({
     title: 'Introducing Telescope',
-    userId: sacha._id,
-    author: sacha.profile.name,
-    url: 'http://sachagreif.com/introducing-telescope/',
+    poem: 'I was walking down the street the other day... how did i meet. another frind , aman and just said. man i can smeel your feet a mile away. SMALL WORLD!',
+    userId: user._id,
+    author: user.profile.name,
     submitted: now - 7 * 3600 * 1000,
     commentsCount: 2,
     upvoters: [], votes: 0
   });
   
   Comments.insert({
-    postId: telescopeId,
+    postId: postid,
     userId: tom._id,
     author: tom.profile.name,
     submitted: now - 5 * 3600 * 1000,
-    body: 'Interesting project Sacha, can I get involved?'
+    body: 'Yep,small world indeed!?'
   });
   
   Comments.insert({
-    postId: telescopeId,
-    userId: sacha._id,
-    author: sacha.profile.name,
+    postId: postid,
+    userId: user._id,
+    author: user.profile.name,
     submitted: now - 3 * 3600 * 1000,
-    body: 'You sure can Tom!'
+    body: 'pam pam pam'
   });
   
   Posts.insert({
     title: 'Meteor',
+    poem: 'Picture yourself in a boat on a river With tangerine trees and marmalade skies Somebody calls you, you answer quite slowly A girl with kaleidoscope eyes',
     userId: tom._id,
     author: tom.profile.name,
-    url: 'http://meteor.com',
     submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
     upvoters: [], votes: 0
   });
   
   Posts.insert({
-    title: 'The Meteor Book',
+    title: 'Meteor',
+    poem: 'Follow her down to a bridge by a fountain Where rocking horse people eat marshmellow pies Everyone smiles as you drift past the flowers That grow so incredibly high',
     userId: tom._id,
     author: tom.profile.name,
-    url: 'http://themeteorbook.com',
-    submitted: now - 12 * 3600 * 1000,
+    submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
     upvoters: [], votes: 0
   });
   
   for (var i = 0; i < 10; i++) {
     Posts.insert({
-      title: 'Test post #' + i,
-      author: sacha.profile.name,
-      userId: sacha._id,
-      url: 'http://google.com/?q=test-' + i,
+      title: 'Test poem #' + i,
+      poem: 'Lucy in the sky with diamonds Lucy in the sky with diamonds Lucy in the sky with diamonds Aaaaahhhhh...',
+      author: user.profile.name,
+      userId: user._id,
       submitted: now - i * 3600 * 1000 + 1,
       commentsCount: 0,
       upvoters: [], votes: 0
