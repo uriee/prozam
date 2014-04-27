@@ -1,9 +1,12 @@
 <template name="postsList">
-  <div class="posts">
+  <div class="container">
+    <div class='row'>
     {{#each postsWithRank}}
-      {{> postItem}}
+      <div class="col-md-4">
+       {{> postItem}}
+      </div>  
     {{/each}}
-    
+    </div>
     {{#if nextPath}}
       <a class="load-more" href="{{nextPath}}">Load more</a>
     {{/if}}
