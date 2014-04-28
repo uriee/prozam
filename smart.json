@@ -3,6 +3,7 @@
     "iron-router": {},
     "spin": {},
     "iron-router-progress": {},
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "fast-render": {}
   }
 }
