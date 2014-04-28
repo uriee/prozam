@@ -70,12 +70,16 @@ body {
     display: block;
     margin: 7px 12px 0 0;
     float: left; }
+  .post h3 {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 20px; }
   .post .post-content {
     float: left; }
     .post .post-content h3 {
       margin: 0;
-      line-height: 1.4;
-      font-size: 18px; }
+      line-height: 1.6;
+      font-size: 20px; }
       .post .post-content h3 a {
         display: inline-block;
         margin-right: 5px; }
@@ -130,14 +134,14 @@ body {
     background: rgba(0, 0, 0, 0.1); }
 
   /* line 32, ../sass/style.scss */
-/*
+
   .navbar .navbar-inner {
     -webkit-border-radius: 0px 0px 3px 3px;
     -moz-border-radius: 0px 0px 3px 3px;
     -ms-border-radius: 0px 0px 3px 3px;
     -o-border-radius: 0px 0px 3px 3px;
     border-radius: 0px 0px 3px 3px; }
-*/
+
 #spinner {
   height: 300px; }
 

@@ -3,7 +3,6 @@
     "iron-router": {},
     "spin": {},
     "iron-router-progress": {},
-    "bootstrap-3": {},
-    "accounts-ui-bootstrap-dropdown": {}
+    "bootstrap-3": {}
   }
 }

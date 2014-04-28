@@ -5,8 +5,7 @@
       "iron-router": {},
       "spin": {},
       "iron-router-progress": {},
-      "bootstrap-3": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "bootstrap-3": {}
     },
     "packages": {
       "iron-router": {
@@ -28,11 +27,6 @@
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
         "tag": "v3.1.1-1",
         "commit": "63dd38968828bb8963636df93e9a1c45e2dfe67e"
-      },
-      "accounts-ui-bootstrap-dropdown": {
-        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.8.3",
-        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
