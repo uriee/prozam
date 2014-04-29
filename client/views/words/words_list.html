@@ -1,0 +1,14 @@
+<template name="wordsList">
+  <div class="container-fluid">
+    <div class='row'>
+    {{#each words}}
+      <div class="col-xs-6 col-md-3">
+       {{> wordItem}}
+      </div>  
+    {{/each}}
+    </div>
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
+  </div>
+</template>

@@ -6,8 +6,12 @@ Meteor.publish('singlePost', function(id) {
   return id && Posts.find(id);
 });
 
-Meteor.publish('words', function(options) {
-  return Words.find({status : 3}, options);
+Meteor.publish('wordPosts', function(id) {
+  return id && Posts.find({word_id : id});
+});
+
+Meteor.publish('paerWords', function() {
+  return Words.find({status : 3});
 });
 
 Meteor.publish('currentWords', function() {

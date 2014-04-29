@@ -1,7 +1,11 @@
 // Fixture data 
 if (Posts.find().count() === 0) {
   var now = new Date().getTime();
-  
+  var wordid = Words.insert({
+    word : 'Hello',
+    status : 0,
+    postsCount : 0
+  });
   // create two users
   var tomId = Meteor.users.insert({
     profile: { name: 'KooKooriKoo tarnegol' }
@@ -16,6 +20,7 @@ if (Posts.find().count() === 0) {
     title: 'Introducing Telescope',
     poem: 'I was walking down the street the other day... how did i meet. another frind , aman and just said. man i can smeel your feet a mile away. SMALL WORLD!',
     userId: user._id,
+    wordId : wordid,
     author: user.profile.name,
     submitted: now - 7 * 3600 * 1000,
     commentsCount: 2,
@@ -42,6 +47,7 @@ if (Posts.find().count() === 0) {
     title: 'Meteor',
     poem: 'Picture yourself in a boat on a river With tangerine trees and marmalade skies Somebody calls you, you answer quite slowly A girl with kaleidoscope eyes',
     userId: tom._id,
+    wordId : wordid,    
     author: tom.profile.name,
     submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
@@ -52,6 +58,7 @@ if (Posts.find().count() === 0) {
     title: 'Meteor',
     poem: 'Follow her down to a bridge by a fountain Where rocking horse people eat marshmellow pies Everyone smiles as you drift past the flowers That grow so incredibly high',
     userId: tom._id,
+    wordId : wordid,    
     author: tom.profile.name,
     submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
@@ -64,6 +71,7 @@ if (Posts.find().count() === 0) {
       poem: 'Lucy in the sky with diamonds Lucy in the sky with diamonds Lucy in the sky with diamonds Aaaaahhhhh...',
       author: user.profile.name,
       userId: user._id,
+      wordId : wordid,      
       submitted: now - i * 3600 * 1000 + 1,
       commentsCount: 0,
       upvoters: [], votes: 0
