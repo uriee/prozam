@@ -1,12 +1,14 @@
 <template name="postItem">
-  <div class="post" {{attributes}}>
-    <p>
+  <div class="panel panel-default" {{attributes}}>
+   <div class="panel-heading"> 
     <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
-    <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
-  </p>
-    <div class="post-content">
+    <h3 class="panel-title"><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+    </div>
+    <hr>
+    <div class="panel-body">
       <h3><span>{{poem}}</span></h3>
-      <p>
+      <hr>
+      <p class="panel">
         {{pluralize votes "Vote"}},
         submitted by {{author}},
         <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>

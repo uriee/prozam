@@ -4,6 +4,7 @@
     "spin": {},
     "iron-router-progress": {},
     "bootstrap-3": {},
-    "fast-render": {}
+    "fast-render": {},
+    "houston": {}
   }
 }

@@ -6,7 +6,8 @@
       "spin": {},
       "iron-router-progress": {},
       "bootstrap-3": {},
-      "fast-render": {}
+      "fast-render": {},
+      "houston": {}
     },
     "packages": {
       "iron-router": {
@@ -34,10 +35,20 @@
         "tag": "v0.2.4",
         "commit": "160a64bd61792f53a7c8848c5e979a953be13564"
       },
+      "houston": {
+        "git": "https://github.com/gterrono/houston.git",
+        "tag": "v1.0.4",
+        "commit": "e76bda40587ac80ce51ee417047be8272664625c"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
         "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.1.2",
+        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
       }
     }
   }
