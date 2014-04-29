@@ -7,11 +7,11 @@ Meteor.publish('singlePost', function(id) {
 });
 
 Meteor.publish('wordPosts', function(id) {
-  return id && Posts.find({word_id : id});
+  return id && Posts.find({wordId : id}) && Words.find({_id : id});
 });
 
-Meteor.publish('paerWords', function() {
-  return Words.find({status : 3});
+Meteor.publish('pastWords', function() {
+  return Words.find({});
 });
 
 Meteor.publish('currentWords', function() {
