@@ -4,7 +4,7 @@ Template.postSubmit.events({
     
     var post = {
       poem: $(e.target).find('[name=poem]').val(),
-      title: $(e.target).find('[name=title]').val(),
+      title: $(e.target).find('[name=title]').val()
     }
     
     Meteor.call('post', post, function(error, id) {

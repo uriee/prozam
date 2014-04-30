@@ -1,5 +1,5 @@
-Meteor.publish('posts', function(options) {
-  return Posts.find({}, options);
+Meteor.publish('posts', function(query,options) {
+  return Posts.find(query, options);
 });
 
 Meteor.publish('singlePost', function(id) {
@@ -19,7 +19,8 @@ Meteor.publish('pastWords', function() {
 });
 
 Meteor.publish('currentWords', function() {
-  return Posts.find({status : {$all : [1,2]}});
+  //return Words.find({status : {$all : [1,2]}});
+  return Words.find({});
 });
 
 Meteor.publish('comments', function(postId) {
