@@ -8,7 +8,8 @@
       "bootstrap-3": {},
       "fast-render": {},
       "houston": {},
-      "accounts-ui-bootstrap-3-blaze": {}
+      "accounts-ui-bootstrap-3-blaze": {},
+      "cron": {}
     },
     "packages": {
       "iron-router": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/rajit/meteor-accounts-ui-bootstrap-3.git",
         "tag": "v0.3.7",
         "commit": "a40b15f4b6213040accec10df97a7793e3a25225"
+      },
+      "cron": {
+        "git": "https://github.com/alexsuslov/Meteor.cron.git",
+        "tag": "v0.0.1",
+        "commit": "5216d14472fee7b692e8371aadc9f35f54ba9bb0"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
