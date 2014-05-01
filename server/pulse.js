@@ -10,8 +10,21 @@ var pulse = function() {
   console.log("Replaced current word:",current.word," : with : ",newWord.word);
 }  
 
+var countDown = function() {
+  t = new Date();
+  var x1 = 615,x2 = 1320,x3=132+615;
+  h = t.getHours();
+  m = t.getMinutes();
+  y = h*60+m
+  x = (y<=x1 ? x1 : (y<=x2 ? x2 : x3));
+  xxx = x-(y).toString();
+    console.log(t,xxx);
+  Words.update({status : 1},{$set : {countDown : xxx}});
+}  
+  
 var cron = new Meteor.Cron( {
       events:{
-        "9 8 * * *" : pulse
+        "* * * * *" : countDown,
+        "15 10 * * *" : pulse
       }
     });
