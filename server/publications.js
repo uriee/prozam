@@ -15,12 +15,12 @@ Meteor.publish('wordPosts', function(id) {
 });
 
 Meteor.publish('pastWords', function() {
-  return Words.find({});
+  return Words.find({status : {$gt : 1}});
 });
 
 Meteor.publish('currentWords', function() {
-  //return Words.find({status : {$all : [1,2]}});
-  return Words.find({});
+  return Words.find({status : 1});
+  //return Words.find({});
 });
 
 Meteor.publish('comments', function(postId) {
