@@ -3,13 +3,11 @@
 
     <hr>
    <div >
-  <ul class="comments">
     {{#each posts}}
       <div class="col-xs-12 col-md-4">    
         {{> postItem}}
     </div>  
     {{/each}}
-  </ul>
    {{#if nextPath}}
       <a class="load-more" href="{{nextPath}}">Load more</a>
     {{/if}}        
