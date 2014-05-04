@@ -1,5 +1,5 @@
 Template.wordPage.helpers({
-  posts: function() {
-    return Posts.find({});
-  }
+  word : function() { return Words.findOne(this.wordId);},
 });
+
+console.log(this.word);

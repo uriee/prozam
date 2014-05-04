@@ -8,18 +8,6 @@ Template.postsList.helpers({
     });
   },
   
-/*
-  posts : function(){
-  Session.setDefault('itemsLimit', 5);
-  console.log("xxx",Session.get('itemsLimit'));
-    this.query = this.query || {};
-    console.log(Session.get('itemsLimit'),this.sort,this.query);
-    Meteor.subscribe('posts', {limit : Session.get('itemsLimit'),sort : this.sort});
-    console.log(Posts.find(this.query,{sort : this.sort}).fetch());
-    return Posts.find(this.query,{sort : this.sort});  
-  }
-  */
- 
   posts : function(){
     if (this.limit) {
       setLimit(this.limit,0);
@@ -28,7 +16,7 @@ Template.postsList.helpers({
     console.log("xxx",getLimit());
     this.query = this.query || {};
     console.log("limit",getLimit(),this.sort,this.query);
-    Meteor.subscribe('posts', {limit : getLimit(),sort : this.sort});
+    Meteor.subscribe('posts', this.query, {limit : getLimit(),sort : this.sort});
     console.log(Posts.find(this.query,{sort : this.sort}).fetch());
     return Posts.find(this.query,{sort : this.sort});  
   }  

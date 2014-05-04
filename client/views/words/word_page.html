@@ -1,15 +1,7 @@
 <template name="wordPage">
-  <h1><a href="{{pathFor 'wordPage'}}">{{word}}</a></h1><h5> - <span>{{pluralize postsCount "song"}}</span></h5>
-
+  <h1><a href="{{pathFor 'wordPage'}}">{{word.word}}</a></h1><h5> - <span>{{pluralize word.postsCount "song"}}</span></h5>
     <hr>
    <div >
-    {{#each posts}}
-      <div class="col-xs-12 col-md-4">    
-        {{> postItem}}
-    </div>  
-    {{/each}}
-   {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{/if}}        
+     {{> postsList}}
    </div>     
 </template>
