@@ -44,7 +44,7 @@ Meteor.methods({
     });
     
     var postId = Posts.insert(post);
-    
+    Words.update({_id : word},{$inc : {postsCount : 1}});
     return postId;
   },
   

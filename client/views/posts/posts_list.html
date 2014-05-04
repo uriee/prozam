@@ -1,14 +1,14 @@
 <template name="postsList">
   <div class="container-fluid">
     <div class='row'>
-    {{#each postsWithRank}}
+    {{#each posts}}
       <div class="col-xs-12 col-md-4">
        {{> postItem}}
       </div>  
     {{/each}}
     </div>
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{/if}}
+
+      <a class="load-more" id="load-more" name="load-more" href="{{nextPath}}">Load more</a>
+
   </div>  
 </template>

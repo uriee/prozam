@@ -12,19 +12,21 @@ var pulse = function() {
 
 var countDown = function() {
   t = new Date();
-  var x1 = 615,x2 = 1320,x3=132+615;
+  var x1 = 390,x2 = 1120,x3=1120+390;
   h = t.getHours();
   m = t.getMinutes();
   y = h*60+m
   x = (y<=x1 ? x1 : (y<=x2 ? x2 : x3));
-  xxx = x-(y).toString();
+  xy =Math.floor((x-y)/60);
+  xxx = xy.toString()+" : "+((x-y)-xy*60).toString();
     console.log(t,xxx);
   Words.update({status : 1},{$set : {countDown : xxx}});
 }  
   
 var cron = new Meteor.Cron( {
       events:{
-        "* * * * *" : countDown,
-        "15 10 * * *" : pulse
+        "30 6 * * *" : pulse,
+        "40 18 * * *" : pulse,
+        "* * * * *" : countDown
       }
     });
