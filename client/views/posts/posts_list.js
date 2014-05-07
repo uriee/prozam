@@ -15,9 +15,7 @@ Template.postsList.helpers({
     }
     console.log("xxx",getLimit());
     this.query = this.query || {};
-    console.log("limit",getLimit(),this.sort,this.query);
     Meteor.subscribe('posts', this.query, {limit : getLimit(),sort : this.sort});
-    console.log(Posts.find(this.query,{sort : this.sort}).fetch());
     return Posts.find(this.query,{sort : this.sort});  
   }  
   
