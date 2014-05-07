@@ -1,17 +1,27 @@
 <template name="postItem">
   <div class="panel panel-default" {{attributes}}>
    <div class="panel-heading"> 
-    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
-    <h3 class="panel-title"><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
-    </div>
-    <hr>
+     <h2 class="panel-title">
+       <a class="btn btn-default btn-sm {{upvotedClass}}" href="#">
+         <i class="fa fa-thumbs-up  fa-lg"></i></a>
+       <a href="{{pathFor 'postPage'}}">{{title}}</a>
+     </h2>
+   </div>
     <div class="panel-body">
-      <h3><span>{{poem}}</span></h3>
+       <div class="text show-more-height">
+      <h3>
+        <br>
+        <span>
+          {{poem}}
+       </span>
+      </h3>
+    </div>
       <hr>
       <p class="panel">
+        <i class="fa fa-thumbs-up "></i>
         {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
+        <i class="fa fa-user "></i> {{author}},
+        <a href="{{pathFor 'postPage'}}"><i class="fa fa-comment"></i>{{pluralize commentsCount "comment"}}</a>
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
     </div>

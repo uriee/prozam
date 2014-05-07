@@ -9,7 +9,9 @@
       "fast-render": {},
       "houston": {},
       "accounts-ui-bootstrap-3-blaze": {},
-      "cron": {}
+      "cron": {},
+      "font-awesome": {},
+      "hopscotch": {}
     },
     "packages": {
       "iron-router": {
@@ -51,6 +53,16 @@
         "git": "https://github.com/alexsuslov/Meteor.cron.git",
         "tag": "v0.0.1",
         "commit": "5216d14472fee7b692e8371aadc9f35f54ba9bb0"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.0.3",
+        "commit": "61e9361384347547ae144f8228faa4deffda23db"
+      },
+      "hopscotch": {
+        "git": "https://github.com/Dsyko/meteor-hopscotch.git",
+        "tag": "v0.1.2",
+        "commit": "2f9ed5cf2813198fbb6ed6030ced40f0b84775a8"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -268,9 +268,14 @@ figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;hei
     border-radius:4px;
     -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);box-shadow:0 1px 1px rgba(0,0,0,0.05)
   }
+
+}
+
+
   .panel-body{background-color:#8899aa;
     padding:15px
-  }
+    width: 250px;
+ }
   .panel-heading{
   padding:10px 15px;
   border-bottom:1px solid transparent;
