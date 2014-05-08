@@ -18,6 +18,10 @@ Meteor.methods({
         word = Words.findOne({status : 1})._id;
       postWithSameLink = Posts.findOne({url: postAttributes.url});
     
+    if (typeof word == 'string' || word instanceof String){}
+    else { word = word._str;}
+
+    
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to post new stories");

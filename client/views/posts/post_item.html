@@ -19,14 +19,14 @@
       <hr>
       <div class="row">
         <div class="col-xs-3">
-          <i class="fa fa-thumbs-up fa-lg"></i>
+          <i class="fa fa-thumbs-up fa-2x"></i>
           {{votes}}
         </div>  
         <div class="col-xs-5">  
-          <i class="fa fa-user fa-lg"></i> {{author}}
+          <i class="fa fa-user fa-2x"></i> {{author}}
         </div>  
         <div class="col-xs-2">    
-          <a href="{{pathFor 'postPage'}}"><i class="fa fa-comment fa-lg"></i>{{commentsCount}}</a>
+          <a href="{{pathFor 'postPage'}}"><i class="fa fa-comment fa-2x"></i>{{commentsCount}}</a>
         </div>  
         <div class="col-xs-2">           
           {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
