@@ -1,10 +1,12 @@
 <template name="notifications">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-    Notifications
+
     {{#if notificationCount}}
+        Notifications
       <span class="badge badge-inverse">{{notificationCount}}</span>
+        <b class="caret"></b>
     {{/if}}
-    <b class="caret"></b>
+
   </a>
   <ul class="notification dropdown-menu">
     {{#if notificationCount}}
