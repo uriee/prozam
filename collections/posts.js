@@ -57,6 +57,8 @@ Meteor.methods({
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to upvote");
+    if (!livePosts(postId))
+      throw new Meteor.Error(401, "This post cant get votes");
     
     Posts.update({
       _id: postId, 
