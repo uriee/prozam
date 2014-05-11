@@ -41,7 +41,7 @@ Meteor.methods({
     var post = _.extend(_.pick(postAttributes, 'title', 'poem'), {
       userId: user._id,
       wordId: word,
-      author: user.username, 
+      author: user.profile.username, 
       submitted: new Date().getTime(),
       commentsCount: 0,
       upvoters: [], votes: 0
