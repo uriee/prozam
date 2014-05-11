@@ -1,3 +1,4 @@
+
 var pulse = function() {
   var current = Words.findOne({status : 1}),
       word = newWords.findOne({});

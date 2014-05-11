@@ -23,6 +23,9 @@
             <a href="{{pathFor 'pastWords'}}">Past Words</a>
           </li>          
           {{#if currentUser}}
+          <li class="{{activeRouteClass  'myBestPosts'}}">
+            <a href="{{pathFor 'myBestPosts'}}">MyBest</a>
+          </li>                      
             <li class="{{activeRouteClass 'postSubmit'}}">
               <a href="{{pathFor 'postSubmit'}}">Submit Your Poem</a>
             </li>

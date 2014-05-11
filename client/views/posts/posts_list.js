@@ -9,14 +9,14 @@ Template.postsList.helpers({
   },
   
   posts : function(){
+    if (this.my) this.query.userId = Meteor.userId();
     if (this.limit) {
       setLimit(this.limit,0);
       this.limit=null;
     }
-    console.log("xxx",getLimit());
     this.query = this.query || {};
     Meteor.subscribe('posts', this.query, {limit : getLimit(),sort : this.sort});
-    return Posts.find(this.query,{sort : this.sort});  
+    return Posts.find({},{sort : this.sort});  
   }  
   
 });
@@ -28,13 +28,12 @@ var getLimit = function () {
   return limit;
 };
 var setLimit = function (val,inc) {
-  console.log("in setlimit",limit,val,inc)
   if (val) limit = val;
   else limit =limit + inc;
   limitDep.changed();
 }
 
-// whenever #showMoreResults becomes visible, retrieve more results
+// whenever #load-more becomes visible, retrieve more results
 function showMoreVisible() {
     var threshold, target = $('#load-more');
     if (!target.length) return;
@@ -42,14 +41,14 @@ function showMoreVisible() {
  
     if (target.offset().top < threshold) {
         if (!target.data('visible')) {
-             console.log('target became visible (inside viewable area)',getLimit());
+             //console.log('target became visible (inside viewable area)',getLimit());
             target.data('visible', true);
                      // Session.set('itemsLimit',Session.get('itemsLimit') + 10);
                         setLimit(0,5);
         }
     } else {
         if (target.data('visible')) {
-             console.log('target became invisible (below viewable arae)');
+             //console.log('target became invisible (below viewable arae)');
             target.data('visible', false);
         }
     }        
