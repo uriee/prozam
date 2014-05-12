@@ -1,14 +1,25 @@
 <template name="wordsList">
   <div class="container-fluid">
+
+  <span>Live Words</span>
     <div class='row'>
-    {{#each words}}
+    {{#each liveWords}}
       <div class="col-xs-6 col-md-3">
        {{> wordItem}}
       </div>  
     {{/each}}
     </div>
-    {{#if nextPath}}
-      <a class="load-more" href="{{nextPath}}">Load more</a>
-    {{/if}}
+
+  <span>Past Words</span>
+    <div class='row'>
+    {{#each pastWords}}
+      <div class="col-xs-6 col-md-3">
+       {{> wordItem}}
+      </div>  
+    {{/each}}
+    </div>    
+
+      <a class="load-more" id="load-more" name="load-more" >Load more</a>
+
   </div>
 </template>

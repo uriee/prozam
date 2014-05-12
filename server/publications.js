@@ -16,8 +16,9 @@ Meteor.publish('posts', function(query,options) {
   return query && Posts.find(query,options); 
 });
 
-Meteor.publish('pastWords', function() {
-  return Words.find({status : {$gt : 1}});
+Meteor.publish('words', function(query,options) {
+	console.log(query,options);
+  return Words.find(query,options);
 });
 
 Meteor.publish('currentWords', function() {

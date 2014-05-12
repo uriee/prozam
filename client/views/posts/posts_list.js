@@ -21,13 +21,13 @@ Template.postsList.helpers({
   
 });
 /*---------------------------*/
-var limit = 5;
-var limitDep = new Deps.Dependency;
-var getLimit = function () {
+ limit = 5;
+ limitDep = new Deps.Dependency;
+ getLimit = function () {
   limitDep.depend()
   return limit;
 };
-var setLimit = function (val,inc) {
+ setLimit = function (val,inc) {
   if (val) limit = val;
   else limit =limit + inc;
   limitDep.changed();
@@ -43,7 +43,6 @@ function showMoreVisible() {
         if (!target.data('visible')) {
              //console.log('target became visible (inside viewable area)',getLimit());
             target.data('visible', true);
-                     // Session.set('itemsLimit',Session.get('itemsLimit') + 10);
                         setLimit(0,5);
         }
     } else {
