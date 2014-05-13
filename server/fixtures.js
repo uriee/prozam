@@ -2,11 +2,12 @@
 if (Posts.find().count() === 0) {
   var now = new Date().getTime();
 
-  newWords.insert({word:'North'});  
-    newWords.insert({word:'Glory'}); 
-    newWords.insert({word:'Fish'}); 
-    newWords.insert({word:'Light'}); 
-    newWords.insert({word:'Stimulation'}); 
+newWords.insert({word:'North'});  
+newWords.insert({word:'Glory'}); 
+newWords.insert({word:'Fish'}); 
+newWords.insert({word:'Light'}); 
+newWords.insert({word:'Stimulation'}); 
+newWords.insert({word:'Story'}); 
 Words.insert({word : 'Lovely', status : 1, postsCount : 0});
 Words.insert({word : 'Farm', status : 2, postsCount : 0});
 Words.insert({word : 'Protection', status : 3, postsCount : 0});
@@ -36,7 +37,7 @@ users = Meteor.users.find({}).fetch();
     title: 'Girl',
     poem: "Is there anybody going to listen to my story All about the girl who came to stay? She's the kind of girl you want so much It makes you sorry Still, you don't regret a single day Ah girl",
     userId: users[0]._id,
-    wordId: words[2]._id,
+    word: {_id : words[0]._id, word : words[0].word},
     author: users[0].username,
     submitted: now - 7 * 3600 * 1000,
     commentsCount: 2,
@@ -63,7 +64,7 @@ users = Meteor.users.find({}).fetch();
     title: 'Lucy In the sky with diamonds',
     poem: "Picture yourself in a boat on a river With tangerine trees and marmalade skies Somebody calls you, you answer quite slowly A girl with kaleidoscope eyes",
     userId: users[2]._id,
-    wordId: words[3]._id,    
+    word: {_id : words[1]._id, word : words[1].word},
     author: users[2].username,
     submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
@@ -74,7 +75,7 @@ users = Meteor.users.find({}).fetch();
     title: 'Doctor Robert',
     poem: "Ring my friend, I said you call Doctor Robert Day or night he'll be there any time at all, Doctor Robert Doctor Robert, you're a new and better man He helps you to understand He does everything he can, Doctor Robert",
     userId: users[2]._id,
-    wordId: words[3]._id,    
+    word: {_id : words[2]._id, word : words[2].word},
     author: users[2].username,
     submitted: now - 10 * 3600 * 1000,
     commentsCount: 0,
@@ -88,7 +89,7 @@ users = Meteor.users.find({}).fetch();
       poem: "Baby you can drive my car Yes I'm gonna be a star Baby you can drive my car And maybe I love you Beep beep'm beep beep yeah",
       author: users[1].username,
       userId: users[1]._id,
-      wordId: words[4]._id,      
+      word: {_id : words[3]._id, word : words[3].word},      
       submitted: now - i * 3600 * 1000 + 1,
       commentsCount: 0,
     upvoters: [], votes: 0, upvotersName: []

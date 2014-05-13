@@ -15,12 +15,9 @@ Posts.deny({
 Meteor.methods({
   post: function(postAttributes) {
     var user = Meteor.user(),
-        word = Words.findOne({status : 1})._id;
+        word = Words.findOne({status : 1});
       postWithSameLink = Posts.findOne({url: postAttributes.url});
     
-    if (typeof word == 'string' || word instanceof String){}
-    else { word = word._str;}
-
     
     // ensure the user is logged in
     if (!user)
@@ -40,7 +37,7 @@ Meteor.methods({
     // pick out the whitelisted keys
     var post = _.extend(_.pick(postAttributes, 'title', 'poem'), {
       userId: user._id,
-      wordId: word,
+      word: {_id : word._id,word : word.word},
       author: user.profile.username, 
       submitted: new Date().getTime(),
       commentsCount: 0,
@@ -48,7 +45,7 @@ Meteor.methods({
     });
     
     var postId = Posts.insert(post);
-    Words.update({_id : word},{$inc : {postsCount : 1}});
+    Words.update({_id : word._id},{$inc : {postsCount : 1}});
     return postId;
   },
   

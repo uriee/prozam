@@ -17,13 +17,11 @@ Meteor.publish('posts', function(query,options) {
 });
 
 Meteor.publish('words', function(query,options) {
-	console.log(query,options);
   return Words.find(query,options);
 });
 
-Meteor.publish('currentWords', function() {
-  return Words.find({status : 1});
-  //return Words.find({});
+Meteor.publish('liveWords', function() {
+  return Words.find({status : {$lt : 4}});
 });
 
 Meteor.publish('comments', function(postId) {

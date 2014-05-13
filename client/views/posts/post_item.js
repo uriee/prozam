@@ -18,6 +18,13 @@ Template.postItem.helpers({
       return 'disabled';
     }
   },
+  livePost: function() {
+    if (livePosts(this._id)) {
+      return 'hidden';
+    } else {
+      return '';
+    }
+  },  
   attributes: function() {
     var post = _.extend({}, Positions.findOne({postId: this._id}), this);
     var newPosition = post._rank * POST_HEIGHT;
