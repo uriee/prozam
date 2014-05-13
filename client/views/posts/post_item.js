@@ -19,7 +19,7 @@ Template.postItem.helpers({
     }
   },
   livePost: function() {
-    if (livePosts(this._id)) {
+    if (!livePosts(this._id)) {
       return 'hidden';
     } else {
       return '';

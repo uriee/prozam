@@ -2,11 +2,13 @@
   <div class="panel panel-default" {{attributes}}>
     <div class="panel-heading"> 
       <h2 class="panel-title">
-        <a class="btn btn-default btn-lg {{upvotedClass}}" href="#">
+        <a class="btn btn-default btn-lg {{upvotedClass}} {{livePost}} " href="#">
          <i class="fa fa-thumbs-up fa-2x"></i>
         </a>
         <a href="{{pathFor 'postPage'}}">{{title}}</a>
-        <a href="{{pathFor 'wordPage'}}" class='pull-right'>{{word.word}}</a>
+
+        <a href="/words/{{word._id}}" class='pull-right'>{{word.word}}</a>
+        
       </h2>
     </div>
     <div class="panel-body">
