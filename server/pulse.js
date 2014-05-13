@@ -2,7 +2,7 @@
 var pulse = function() {
   var current = Words.findOne({status : 1})
   var word = newWords.findOne({});
-  Words.update({},{$inc : {status : 1}});
+  Words.update({},{$inc : {status : 1}},{multi : true});
   newWord = Words.insert({word : word.word, postsCount : 0, status : 1});
   newWords.remove({_id : word._id});
   if(!newWord)  newWord = Words.insert({word : 'Error', postsCount : 0, status : 1});
