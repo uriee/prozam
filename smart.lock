@@ -11,7 +11,8 @@
       "cron": {},
       "font-awesome": {},
       "hopscotch": {},
-      "accounts-entry": {}
+      "accounts-entry": {},
+      "animate-css": {}
     },
     "packages": {
       "iron-router": {
@@ -64,6 +65,11 @@
         "tag": "v0.7.3",
         "commit": "7facaa045d3720eeeba3420c28e48d5709188fe3"
       },
+      "animate-css": {
+        "git": "https://github.com/nate-strauser/meteor-animate-css.git",
+        "tag": "v3.1.1",
+        "commit": "59ce70b99dff5bc3d1227b789eefa43a761db158"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -71,8 +77,8 @@
       },
       "paginated-subscription": {
         "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.2.1",
-        "commit": "f44d171badcc2e6f87c752580be16c955cdb3bb8"
+        "tag": "v0.2.2",
+        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
       },
       "accounts-t9n": {
         "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",

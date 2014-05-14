@@ -7,7 +7,7 @@ var pulse = function() {
   newWords.remove({_id : word._id});
   if(!newWord)  newWord = Words.insert({word : 'Error', postsCount : 0, status : 1});
   console.log("Replaced current word:",current.word," : with : ",newWord.word);
-}  
+};  
 
 var countDown = function() {
   t = new Date();
@@ -20,7 +20,7 @@ var countDown = function() {
   xxx = xy.toString()+" : "+((x-y)-xy*60).toString();
     console.log(t,xxx);
   Words.update({status : 1},{$set : {countDown : xxx}});
-}  
+};  
   
 var cron = new Meteor.Cron( {
       events:{

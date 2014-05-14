@@ -22,17 +22,7 @@ Template.postsList.helpers({
 });
 /*---------------------------*/
  limit = 5;
- limitDep = new Deps.Dependency;
- getLimit = function () {
-  limitDep.depend()
-  return limit;
-};
- setLimit = function (val,inc) {
-  if (val) limit = val;
-  else limit =limit + inc;
-  limitDep.changed();
-}
-
+ 
 // whenever #load-more becomes visible, retrieve more results
 function showMoreVisible() {
     var threshold, target = $('#load-more');
@@ -52,7 +42,6 @@ function showMoreVisible() {
         }
     }        
 }
- 
 /*----------------------------*/
 
 $(window).scroll(showMoreVisible);
