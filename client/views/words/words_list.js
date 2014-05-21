@@ -6,7 +6,7 @@ Template.wordsList.helpers({
       this.limit=null;
     }
     Meteor.subscribe('words',{status : {$gt : 3}},{limit : getLimit(),sort : this.sort});
-    return Words.find({status : {$gt : 3}},{sort : this.sort});  
+    return Words.find({status : {$gt : 3}, postsCount : {$gt : 0}},{sort : this.sort});  
   },
 
   liveWords :  function(){

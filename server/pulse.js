@@ -2,6 +2,13 @@
 var pulse = function() {
   var current = Words.findOne({status : 1})
   var word = newWords.findOne({});
+  var livewords = Words.find({status : {lt : 5}});
+  _.map(livewords.fetch(),function(w){
+    var wordPosts = Posts.find({wordId : w._id},{sort : votes, limit : 10});
+      _.each(wordPosts,function(p){
+             //create an alert
+             });
+        });
   Words.update({},{$inc : {status : 1}},{multi : true});
   newWord = Words.insert({word : word.word, postsCount : 0, status : 1});
   newWords.remove({_id : word._id});

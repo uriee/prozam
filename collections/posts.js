@@ -38,7 +38,7 @@ Meteor.methods({
     var post = _.extend(_.pick(postAttributes, 'title', 'poem'), {
       userId: user._id,
       word: {_id : word._id,word : word.word},
-      author: user.profile.username, 
+      author: user.username, 
       submitted: new Date().getTime(),
       commentsCount: 0,
       upvoters: [], votes: 0
@@ -64,5 +64,12 @@ Meteor.methods({
       $addToSet: {upvoters: user._id},
       $inc: {votes: 1}
     });
-  }
+  },
+  
+  delete: function(id){
+    word = Words.findOne({status : 1});
+    Words.update({_id : word._id},{$inc : {postsCount : -1}});
+    Posts.remove(id);
+    Router.go('home');
+}
 });

@@ -21,11 +21,14 @@ Template.postEdit.events({
   
   'click .delete': function(e) {
     e.preventDefault();
-    
     if (confirm("Delete this post?")) {
-      var currentPostId = this._id;
-      Posts.remove(currentPostId);
-      Router.go('home');
+         Meteor.call('delete', this._id, function(error, id) {
+            if (error) {
+              // display the error to the user
+              throwError(error.reason);
+            } 
+        });
     }
   }
+  
 });

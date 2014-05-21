@@ -8,10 +8,20 @@ newWords.insert({word:'Fish'});
 newWords.insert({word:'Light'}); 
 newWords.insert({word:'Stimulation'}); 
 newWords.insert({word:'Story'}); 
+newWords.insert({word:'Fast'});   
+newWords.insert({word:'Steam'});   
+newWords.insert({word:'NeverMind'}); 
+newWords.insert({word:'Night'});   
 Words.insert({word : 'Lovely', status : 1, postsCount : 0});
+/*  
 Words.insert({word : 'Farm', status : 2, postsCount : 0});
 Words.insert({word : 'Protection', status : 3, postsCount : 0});
 Words.insert({word : 'Never', status : 3, postsCount : 0});
+Accounts.createUser({username : 'user11', email: 'user11@user.com', password: 'user11u'});
+Accounts.createUser({username : 'user14', email: 'user14@user.com', password: 'user14u'});
+Accounts.createUser({username : 'user13', email: 'user13@user.com', password: 'user13u'});  
+Accounts.createUser({username : 'user12', email: 'user12@user.com', password: 'user12u'});  
+
 Meteor.users.insert({
 "emails" : [  {  "address" : "user14@user.com",  "verified" : false } ], "profile" : {"username" : "user14"  }, "services" : { "password" : { "srp" : { "identity" : "H647JDghFWvQWFfRx", "salt" : "GDkjPRoSEu6ZPCjM8",
 "verifier" : "a8c66cfeae8851a7a89fdf6e81292cdb3c4f9c0f6eb78fab2d968ef0aab414b369d531bd1a4aa6f863b51fce04f0a796ccd63c2314fffb1be5739cd0dd1c195e946e5b452cd98b27fa2901322484e0af5085a2fe0500deb077753dca8419fda044be789e3472ed50f2499dee5125b6eda06a6f23da9a39a0d453168bd6b00506" } },
@@ -29,6 +39,7 @@ Meteor.users.insert({
 "verifier" : "e3b94b9f091b46d9922bbc6e3fa5fc7d2ec62668472a2bf4be7f3ad10b7511826b19c4acdde23595b18c221643ba0a31453933ca8781373f6066f2d3a38974053b244ffa09f5f345c1c767885dc4c49aaec11f2b6635fdafbcb7f0a742d4cf6cee0139f7a5238a41c5b71e860ad2650d55f0b4097c448924ed4b779f28fa70f5" } },
 "resume" : { "loginTokens" : [ ] } } }   
 );      
+
   
 words = Words.find({}).fetch();
 users = Meteor.users.find({}).fetch();
@@ -47,7 +58,7 @@ users = Meteor.users.find({}).fetch();
   Comments.insert({
     postId: postid,
     userId: users[2]._id,
-    author: users[2].usrename,
+    author: users[2].username,
     submitted: now - 5 * 3600 * 1000,
     body: 'Yes i like girls!?'
   });
@@ -95,4 +106,5 @@ users = Meteor.users.find({}).fetch();
     upvoters: [], votes: 0, upvotersName: []
     });
   }
+  */
 }
