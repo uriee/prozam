@@ -1,5 +1,5 @@
 // Fixture data 
-if (Posts.find().count() === 0) {
+if (Words.find().count() === 0) {
   var now = new Date().getTime();
 
 newWords.insert({word:'North'});  

@@ -70,6 +70,5 @@ Meteor.methods({
     word = Words.findOne({status : 1});
     Words.update({_id : word._id},{$inc : {postsCount : -1}});
     Posts.remove(id);
-    Router.go('home');
 }
 });
