@@ -27,6 +27,7 @@ Template.postEdit.events({
               // display the error to the user
               throwError(error.reason);
             } 
+         Router.go('home');
         });
     }
   }

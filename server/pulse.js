@@ -1,6 +1,7 @@
 
 var pulse = function() {
   var current = Words.findOne({status : 1})
+  if (current.postCount === 0) throw new Meteor.Error(401, "No posts where submited, word would change on the next pulse.");
   var word = newWords.findOne({});
   var livewords = Words.find({status : {lt : 5}});
   _.map(livewords.fetch(),function(w){
