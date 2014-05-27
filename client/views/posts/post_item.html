@@ -1,11 +1,11 @@
 <template name="postItem">
-  <div class="panel panel-default" {{attributes}}>
+  <div id="{{_id}}" class="panel panel-default" {{attributes}}>
     <div class="panel-heading"> 
       <h2 class="panel-title">
         <a class="btn btn-default btn-lg {{upvotedClass}} {{livePost}} " href="#">
          <i class="fa fa-thumbs-up fa-2x"></i>
         </a>
-        <a href="{{pathFor 'postPage'}}">{{title}}</a>
+        <a class='extend' href="{{pathFor 'postPage'}}">{{title}}</a>
 
         <a href="/words/{{word._id}}" class='pull-right'>{{word.word}}</a>
         
@@ -35,6 +35,7 @@
           {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
         </div>   
       </div>
-  </div>
+    </div>
+    <div class="Extend" ></div>
   </div>
 </template>

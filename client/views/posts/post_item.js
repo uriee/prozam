@@ -53,3 +53,7 @@ Template.postItem.events({
     Meteor.call('upvote', this._id);
   }
 });
+
+var toggleVisible = function(element){
+  
+}
