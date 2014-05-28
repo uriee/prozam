@@ -67,8 +67,8 @@ Meteor.methods({
   },
   
   delete: function(id){
-    word = Words.findOne({status : 1});
-    Words.update({_id : word._id},{$inc : {postsCount : -1}});
+    post = Posts.findOne({_id: id});
+    Words.update({_id : post.word._id},{$inc : {postsCount : -1}});
     Posts.remove(id);
 }
 });
