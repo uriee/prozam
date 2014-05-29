@@ -43,5 +43,5 @@ Template.layout.rendered = function(){
 if(!Meteor.userId()) {
   hopscotch.startTour(tour);
 }
-
+ $.slidebars();
 };

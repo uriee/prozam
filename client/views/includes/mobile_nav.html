@@ -1,10 +1,31 @@
 <template name="mobile_nav">
-  <div id="" class="mobile-nav">
+  <div>
     <div>
-      <ul>
-        <li><a class="top" href="/top">Best</a></li>
-        <li><a class="new" href="/new">New</a></li>
-        <li><a href="/submit">Submit Poem</a></li>
+      <ul >
+          <li>
+          <a href="#"  class="newPosts" >New</a>
+        </li>
+        <li >
+          <a href="#" class="bestPosts">Best</a>
+        </li>
+        <li >
+          <a href="#" class="pastWords">Past Words</a>
+        </li>          
+ {{#if currentUser}}
+        <li >
+          <a href="#" class="myBestPosts">MyBest</a>
+        </li>                      
+        <li >
+          <a href="#" class="postSubmit"><i class="fa fa-pencil fa-2x"></i>Submit Your Poem</a>
+        </li>
+        <li class="dropdown">
+          {{> notifications}}
+        </li>                           
+ {{/if}}                             
+
+        <li>
+          {{> accountButtons}}
+        </li>        
       </ul>
     </div>
   </div>
