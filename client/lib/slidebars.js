@@ -274,7 +274,7 @@
 		// 008 - User Input
 		
 		function eventHandler(event, selector) {
-			event.stopPropagation(); // Stop event bubbling.
+			//event.stopPropagation(); // Stop event bubbling.
 			event.preventDefault(); // Prevent default behaviour
 			if (event.type === 'touchend') selector.off('click'); // If event type was touch turn off clicks to prevent phantom clicks.
 		}
