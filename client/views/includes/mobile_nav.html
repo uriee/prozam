@@ -1,27 +1,27 @@
 <template name="mobile_nav">
   <div>
     <div>
-      <ul class='sb-menu sb-close'>
+      <ul class='sb-menu'>
           <li>
-          <a href="#"  class="newPosts" >New</a>
+          <a href="#"  class="newPosts sb-close" >New</a>
         </li>
         <li >
-          <a href="#" class="bestPosts">Best</a>
+          <a href="#" class="bestPosts sb-close">Best</a>
         </li>
         <li >
-          <a href="#" class="pastWords">Past Words</a>
+          <a href="#" class="pastWords sb-close">Past Words</a>
         </li>          
- {{#if currentUser}}
+
         <li >
-          <a href="#" class="myBestPosts">MyBest</a>
+          <a href="#" class="myBestPosts sb-close">MyBest</a>
         </li>                      
         <li >
-          <a href="#" class="postSubmit"><i class="fa fa-pencil fa-2x"></i>Submit Your Poem</a>
+          <a href="#" class="postSubmit sb-close"><i class="fa fa-pencil fa-2x"></i>Submit Your Poem</a>
         </li>
-        <li class="dropdown">
+        <li class='sb-open'>
           {{> notifications}}
         </li>                           
- {{/if}}                             
+            
 
         <li>
           {{> accountButtons}}

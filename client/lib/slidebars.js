@@ -320,8 +320,8 @@
 			Router.go('/mybest');
 		});
    	$('.postSubmit').on('touchend click', function(event) {
+      			Router.go('/submit'); 
 			eventHandler(event, $(this)); // Handle the event.
-			Router.go('/submit'); 
 		});    
 		
 		// Close a Slidebar
