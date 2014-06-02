@@ -1,14 +1,17 @@
 
 <template name="layout">
+        {{>header}}
   <div class="sb-slidebar sb-left">
     {{>mobile_nav}}
     <!-- Your left Slidebar content. -->
   </div>  
+
   <div id="sb-site">  
     <div class="container">
-      {{>header}}
+
       {{> errors}}
       <div id="main" class="row-fluid">
+            {{> activity}}
         {{> yield}}
       </div>
     </div>
