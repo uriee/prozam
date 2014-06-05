@@ -12,7 +12,8 @@
       "font-awesome": {},
       "hopscotch": {},
       "accounts-entry": {},
-      "animate-css": {}
+      "animate-css": {},
+      "kadira": {}
     },
     "packages": {
       "iron-router": {
@@ -27,8 +28,8 @@
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
-        "tag": "v0.3.1",
-        "commit": "3f7900feb4bb70a1289b39a1fdcd1f438c0335b3"
+        "tag": "v0.4.0",
+        "commit": "02f78bdaca4c13d59f548d5a0ce83408c34b56d1"
       },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
@@ -52,8 +53,8 @@
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
-        "tag": "v4.0.3",
-        "commit": "61e9361384347547ae144f8228faa4deffda23db"
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
       },
       "hopscotch": {
         "git": "https://github.com/Dsyko/meteor-hopscotch.git",
@@ -69,6 +70,11 @@
         "git": "https://github.com/nate-strauser/meteor-animate-css.git",
         "tag": "v3.1.1",
         "commit": "59ce70b99dff5bc3d1227b789eefa43a761db158"
+      },
+      "kadira": {
+        "git": "https://github.com/meteorhacks/kadira.git",
+        "tag": "v2.1.1",
+        "commit": "d15bb5299c898d2534b9f0d3ab07daf266a8928a"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

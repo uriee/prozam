@@ -3,18 +3,19 @@
     <div class="container">
         <div class="navbar-header ">
       
-            <div class="navbar-brand " id='prozam'>
+            <div class="navbar-brand col-xs-2" id='prozam'>
               <span class='sb-toggle-left'> Prozam </span>
             </div>   
-        </div>
-            <span class='visible-xs nav navbar-nav navbar-right row'  >
-                                 
-                    <div class="dropdown col-xs-8">
+        
+            <span class='visible-xs '  >
+              <div class="col-xs-2">     </div>                            
+                    <div class="dropdown col-xs-4">
                       {{> notifications}}
                     </div>                           
-                    <div class='col-xs-4'><span id='account'>{{> accountButtons}}</span></div>
-            
+                    <div class='col-xs-4 list-unstyled'><span id='account'>{{> accountButtons}}</span></div>
+          
             </span> 
+          </div>
         <span class="collapse navbar-collapse navHeaderCollapse ">
           <ul class="nav navbar-nav">
             <li class="{{activeRouteClass 'home' 'newPosts'}}">

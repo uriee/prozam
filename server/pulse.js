@@ -26,7 +26,6 @@ var countDown = function() {
   x = (y<=x1 ? x1 : (y<=x2 ? x2 : x3));
   xy =Math.floor((x-y)/60);
   xxx = xy.toString()+" : "+((x-y)-xy*60).toString();
-    console.log(t,xxx);
   Words.update({status : 1},{$set : {countDown : xxx}});
 };  
   
