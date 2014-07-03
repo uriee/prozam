@@ -5,12 +5,14 @@
     "iron-router-progress": {},
     "bootstrap-3": {},
     "fast-render": {},
-    "houston": {},
     "cron": {},
     "font-awesome": {},
     "hopscotch": {},
     "accounts-entry": {},
     "animate-css": {},
-    "kadira": {}
+    "kadira": {},
+    "s3": {},
+    "collectionFS": {},
+    "cfs-ui": {}
   }
 }

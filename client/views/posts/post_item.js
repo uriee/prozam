@@ -10,6 +10,10 @@ Template.postItem.helpers({
     a.href = this.url;
     return a.hostname;
   },
+  poem: function(){
+    if(this.imagePath === "" || !this.imagePath) return this.poem;
+    else return "";
+  },
   upvotedClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.upvoters, userId)) {

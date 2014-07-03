@@ -14,6 +14,7 @@ Posts.deny({
 
 Meteor.methods({
   post: function(postAttributes) {
+    console.log("postattributes:",postAttributes);
     var user = Meteor.user(),
         word = Words.findOne({status : 1});
       postWithSameLink = Posts.findOne({url: postAttributes.url});
@@ -35,7 +36,7 @@ Meteor.methods({
     }
     
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes, 'title', 'poem'), {
+    var post = _.extend(_.pick(postAttributes, 'title', 'poem', 'imageId'), {
       userId: user._id,
       word: {_id : word._id,word : word.word},
       author: user.username, 

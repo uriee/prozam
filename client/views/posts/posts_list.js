@@ -16,7 +16,10 @@ Template.postsList.helpers({
     }
     this.query = this.query || {};
     Meteor.subscribe('posts', this.query, {limit : getLimit(),sort : this.sort});
-    return Posts.find({},{sort : this.sort});  
+    retPosts = Posts.find({},{sort : this.sort});
+   // subImages = _.uniqe(map(retPosts,function(p) {return p.imageId;}))
+   // Meteor.subscribe('images',{_id : {$in : subImages}});
+    return retPosts;  
   }  
   
 });
