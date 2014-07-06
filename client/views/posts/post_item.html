@@ -17,7 +17,7 @@
           <span>
             {{poem}}
             {{#with FS.GetFile "images" imageId}}
-              <img src="{{this.url store='images'}}" alt="">
+              <img class='img-responsive' src="{{this.url store='images'}}" alt="">
             {{/with}}
          </span>
         </h3>
