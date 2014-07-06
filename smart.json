@@ -13,6 +13,7 @@
     "kadira": {},
     "s3": {},
     "collectionFS": {},
-    "cfs-ui": {}
+    "cfs-ui": {},
+    "cfs-public-folder": {}
   }
 }

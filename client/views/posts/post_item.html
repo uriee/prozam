@@ -16,7 +16,7 @@
         <h3>
           <span>
             {{poem}}
-            {{#with FS.GetFile "cfs.images.filerecord" imageId}}
+            {{#with FS.GetFile "images" imageId}}
               <img src="{{this.url store='images'}}" alt="">
             {{/with}}
          </span>

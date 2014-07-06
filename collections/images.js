@@ -5,8 +5,8 @@ FS.HTTP.setHeadersForGet([
 
 //Create a thumbnail store
 var images = new FS.Store.FileSystem("images", {
-  path: "~/prozam-files/images",
-    //Create the thumbnail as we save to the store.
+  //path: "../prozam-files/images",
+    
     transformWrite: function(fileObj, readStream, writeStream) {
         /* Use graphicsmagick to create a 300x300 square thumbnail at 100% quality,
         * orient according to EXIF data if necessary and then save by piping to the 
@@ -17,7 +17,7 @@ var images = new FS.Store.FileSystem("images", {
 });
 
 //Create globally scoped Images collection.
-Images = new FS.Collection("cfs.images.filerecord", {
+Images = new FS.Collection("images", {
     stores: [images],
     filter: {
         maxSize: 10485760, //in bytes
